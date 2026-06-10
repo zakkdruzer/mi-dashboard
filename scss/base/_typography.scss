@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as v;
 
+// Tipografía y colores globales
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: v.$color-fondo;

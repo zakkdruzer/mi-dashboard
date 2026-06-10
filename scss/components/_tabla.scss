@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as v;
 
+// Panel que envuelve la tabla
 .panel {
   background-color: v.$color-fondo-card;
   border-radius: v.$radio-base;
@@ -13,6 +14,7 @@
   }
 }
 
+// Tabla de pedidos
 .tabla {
   width: 100%;
   border-collapse: collapse;

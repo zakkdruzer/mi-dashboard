@@ -1,7 +1,8 @@
 @use '../abstracts/variables' as v;
 
+// Sidebar lateral
 .sidebar {
-  background-color: #020617; // un poco más oscuro que el contenido
+  background-color: #020617; // Fondo más oscuro que el contenido
   padding: v.$espacio-lg v.$espacio-md;
   display: flex;
   flex-direction: column;

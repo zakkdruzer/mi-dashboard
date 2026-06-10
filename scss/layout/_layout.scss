@@ -1,12 +1,14 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
+// Layout principal: sidebar + contenido
 .layout {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 260px 1fr;
   background-color: v.$color-fondo;
 
+  // Ejemplo de uso del mixin responsive
   @include m.respond-to(tablet) {
     grid-template-columns: 220px 1fr;
   }
@@ -16,6 +18,7 @@
   }
 }
 
+// Área de contenido principal
 .contenido {
   padding: v.$espacio-md;
   display: flex;

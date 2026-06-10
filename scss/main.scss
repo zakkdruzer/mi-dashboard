@@ -1,0 +1,16 @@
+// MAIN: solo reune los partials con @use
+
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+
+@use 'base/reset';
+@use 'base/typography';
+
+@use 'layout/layout';
+@use 'layout/sidebar';
+@use 'layout/topbar';
+
+@use 'components/boton';
+@use 'components/badge';
+@use 'components/stat';
+@use 'components/tabla';

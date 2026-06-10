@@ -1,5 +1,6 @@
 @use '../abstracts/variables' as v;
 
+// Badges con colores de estado generados por @each
 .badge {
   display: inline-flex;
   align-items: center;
@@ -9,6 +10,7 @@
   font-weight: 600;
   color: #ffffff;
 
+  // Recorremos el mapa v.$badge-colores
   @each $nombre, $color in v.$badge-colores {
     &--#{$nombre} {
       background-color: $color;

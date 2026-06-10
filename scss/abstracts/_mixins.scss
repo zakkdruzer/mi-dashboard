@@ -1,9 +1,25 @@
+// ================================
+// MIXINS GLOBALES
+// ================================
+
+// Importamos el módulo oficial de Sass para trabajar con colores
+@use 'sass:color';
+
+// Importamos nuestras variables con namespace "v"
+@use 'variables' as v;
+
+
+// --------------------------------
+// Mixin: botón reutilizable
+// --------------------------------
+// Recibe un color de fondo ($fondo) y aplica estilos base de botón.
+// Se usa para .boton y sus variantes (primario, secundario, etc.).
 @mixin boton($fondo) {
   background-color: $fondo;
   color: #ffffff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: $radio-base;
+  border-radius: v.$radio-base;
   cursor: pointer;
   font-weight: 600;
   display: inline-flex;
@@ -12,24 +28,37 @@
   gap: 0.5rem;
   transition: background-color 0.2s ease, transform 0.1s ease;
 
+  // Estado hover: ajustamos el color para que sea un poco más oscuro
+  // En versiones nuevas de Sass, se recomienda usar color.adjust en vez de darken().
   &:hover {
-    background-color: darken($fondo, 5%);
+    background-color: color.adjust($fondo, $lightness: -5%);
     transform: translateY(-1px);
   }
 
+  // Estado focus-visible: outline accesible usando el color de acento
   &:focus-visible {
-    outline: 2px solid $color-acento;
+    outline: 2px solid v.$color-acento;
     outline-offset: 2px;
   }
 }
 
+
+// --------------------------------
+// Mixin: respond-to (media queries)
+// --------------------------------
+// Recibe un "alias" de breakpoint (tablet / desktop)
+// y aplica el contenido dentro de la media query correspondiente.
+// Ejemplo de uso:
+//   @include respond-to(tablet) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
 @mixin respond-to($breakpoint) {
   @if $breakpoint == tablet {
-    @media (min-width: $bp-tablet) {
+    @media (min-width: v.$bp-tablet) {
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media (min-width: $bp-desktop) {
+    @media (min-width: v.$bp-desktop) {
       @content;
     }
   }

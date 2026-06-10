@@ -1,9 +1,12 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
+// Botón base + variantes
 .boton {
+  // Botón primario: usa mixin con color primario
   @include m.boton(v.$color-primario);
 
+  // Variante secundaria
   &--secundario {
     @include m.boton(v.$color-fondo-card);
   }

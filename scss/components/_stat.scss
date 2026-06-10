@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins' as m;
 
+// Grid de tarjetas de estadísticas
 .stats {
   display: grid;
   gap: v.$espacio-md;
@@ -15,6 +16,7 @@
   }
 }
 
+// Tarjeta individual
 .stat {
   background-color: v.$color-fondo-card;
   padding: v.$espacio-md;
