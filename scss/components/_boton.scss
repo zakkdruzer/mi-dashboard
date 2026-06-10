@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.boton {
+  @include m.boton(v.$color-primario);
+
+  &--secundario {
+    @include m.boton(v.$color-fondo-card);
+  }
+}

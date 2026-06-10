@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as v;
+
+.panel {
+  background-color: v.$color-fondo-card;
+  border-radius: v.$radio-base;
+  padding: v.$espacio-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-md;
+
+  &__titulo {
+    font-size: 1.1rem;
+  }
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+
+  &__th,
+  &__td {
+    text-align: left;
+    padding: 0.6rem 0.4rem;
+  }
+
+  &__th {
+    color: v.$color-texto-suave;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  &__fila:nth-child(even) {
+    background-color: rgba(148, 163, 184, 0.05);
+  }
+
+  &__fila:hover {
+    background-color: rgba(148, 163, 184, 0.1);
+  }
+}
