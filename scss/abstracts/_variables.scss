@@ -1,0 +1,31 @@
+// Colores principales
+$color-primario: #2563eb; // botones principales, enlaces activos
+$color-acento:   #facc15; // detalles, badges o bordes
+
+// Neutros
+$color-fondo:       #0f172a; // fondo general del dashboard
+$color-fondo-card:  #1e293b; // tarjetas, paneles
+$color-texto:       #e5e7eb; // texto principal
+$color-texto-suave: #9ca3af; // texto secundario
+
+// Estados para badges
+$color-exito:  #22c55e;
+$color-alerta: #f97316;
+$color-error:  #ef4444;
+
+// Espaciados y radios
+$espacio-sm: 0.5rem;
+$espacio-md: 1rem;
+$espacio-lg: 1.5rem;
+$radio-base: 0.75rem;
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// Mapa de estados para @each
+$badge-colores: (
+  exito:  $color-exito,
+  alerta: $color-alerta,
+  error:  $color-error
+);
