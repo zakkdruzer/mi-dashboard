@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel - Dashboard</title>
+    <title>Panel - StarVoyager</title>
 
     <!-- Enlaza el CSS COMPILADO de tu main.scss. No escribas estilos aqui. -->
     <link rel="stylesheet" href="css/main.css" />
@@ -12,11 +12,11 @@
     <div class="layout">
       <!-- ============ SIDEBAR ============ -->
       <aside class="sidebar">
-        <div class="sidebar__logo">DataPanel</div>
+        <div class="sidebar__logo">StarVoyager</div>
         <nav class="sidebar__nav">
           <a href="#" class="sidebar__link sidebar__link--activo">Resumen</a>
-          <a href="#" class="sidebar__link">Ventas</a>
-          <a href="#" class="sidebar__link">Usuarios</a>
+          <a href="#" class="sidebar__link">Rutas</a>
+          <a href="#" class="sidebar__link">Tripulacion</a>
           <a href="#" class="sidebar__link">Ajustes</a>
         </nav>
       </aside>
@@ -25,71 +25,79 @@
       <main class="contenido">
         <!-- Topbar -->
         <header class="topbar">
-          <h1 class="topbar__titulo">Resumen general</h1>
+          <h1 class="topbar__titulo">Resumen de viaje interestelar</h1>
           <div class="topbar__acciones">
-            <button class="boton boton--secundario">Exportar</button>
-            <button class="boton boton--primario">+ Nuevo</button>
+            <button class="boton boton--secundario">Exportar registro</button>
+            <button class="boton boton--primario">+ Nueva misión</button>
           </div>
         </header>
 
         <!-- Tarjetas de estadisticas -->
         <section class="stats">
           <article class="stat">
-            <p class="stat__label">Ingresos</p>
-            <p class="stat__valor">$12.4k</p>
-            <span class="badge badge--exito">+8%</span>
+            <p class="stat__label">Planetas explorados</p>
+            <p class="stat__valor">32</p>
+            <span class="badge badge--exito">+2</span>
           </article>
+
           <article class="stat">
-            <p class="stat__label">Usuarios</p>
-            <p class="stat__valor">3,210</p>
-            <span class="badge badge--exito">+3%</span>
+            <p class="stat__label">Saltos hiperespaciales</p>
+            <p class="stat__valor">148</p>
+            <span class="badge badge--exito">+5</span>
           </article>
+
           <article class="stat">
-            <p class="stat__label">Pedidos</p>
-            <p class="stat__valor">847</p>
-            <span class="badge badge--alerta">0%</span>
+            <p class="stat__label">Señales desconocidas</p>
+            <p class="stat__valor">7</p>
+            <span class="badge badge--alerta">Nuevas</span>
           </article>
+
           <article class="stat">
-            <p class="stat__label">Cancelaciones</p>
-            <p class="stat__valor">23</p>
-            <span class="badge badge--error">-5%</span>
+            <p class="stat__label">Naves dañadas</p>
+            <p class="stat__valor">3</p>
+            <span class="badge badge--error">-1</span>
           </article>
 
           <!-- ZONA DE PERSONALIZACION:
-             agrega AL MENOS una tarjeta de estadistica propia. -->
+             Tarjeta de estadistica propia -->
+          <article class="stat">
+            <p class="stat__label">Especies descubiertas</p>
+            <p class="stat__valor">19</p>
+            <span class="badge badge--exito">+4</span>
+          </article>
         </section>
 
         <!-- Panel con tabla -->
         <section class="panel">
-          <h2 class="panel__titulo">Ultimos pedidos</h2>
+          <h2 class="panel__titulo">Ultimas misiones</h2>
           <table class="tabla">
             <thead>
               <tr>
-                <th class="tabla__th">Cliente</th>
-                <th class="tabla__th">Monto</th>
+                <th class="tabla__th">Destino</th>
+                <th class="tabla__th">Energia usada</th>
                 <th class="tabla__th">Estado</th>
               </tr>
             </thead>
             <tbody>
               <tr class="tabla__fila">
-                <td class="tabla__td">Ana Perez</td>
-                <td class="tabla__td">$120</td>
+                <td class="tabla__td">Kepler-452b</td>
+                <td class="tabla__td">120 u</td>
                 <td class="tabla__td">
-                  <span class="badge badge--exito">Pagado</span>
+                  <span class="badge badge--exito">Completada</span>
                 </td>
               </tr>
               <tr class="tabla__fila">
-                <td class="tabla__td">Luis Gomez</td>
-                <td class="tabla__td">$80</td>
+                <td class="tabla__td">Sector 7G</td>
+                <td class="tabla__td">80 u</td>
                 <td class="tabla__td">
-                  <span class="badge badge--alerta">Pendiente</span>
+                  <span class="badge badge--alerta">En curso</span>
                 </td>
               </tr>
               <tr class="tabla__fila">
-                <td class="tabla__td">Marta Ruiz</td>
-                <td class="tabla__td">$0</td>
+                <td class="tabla__td">Nebulosa Orion</td>
+                <td class="tabla__td">0 u</td>
                 <td class="tabla__td">
-                  <span class="badge badge--error">Cancelado</span>
+                  <span class="badge badge--error">Abortada</span>
                 </td>
               </tr>
             </tbody>
@@ -97,8 +105,34 @@
         </section>
 
         <!-- ZONA DE PERSONALIZACION:
-           agrega UNA seccion/widget nuevo inventado por ti
-           (ej: "Actividad reciente", "Grafico", "Notas", "Tareas"). -->
+           Widget nuevo inventado -->
+
+        <section class="widget-actividad">
+          <h2 class="widget-actividad__titulo">Actividad interestelar</h2>
+          <ul class="widget-actividad__lista">
+            <li class="widget-actividad__item">
+              <span
+                class="widget-actividad__dot widget-actividad__dot--exito"
+              ></span>
+              Aterrizaje exitoso en Kepler-452b
+              <span class="widget-actividad__hora">hace 3 min</span>
+            </li>
+            <li class="widget-actividad__item">
+              <span
+                class="widget-actividad__dot widget-actividad__dot--alerta"
+              ></span>
+              Señal desconocida detectada en sector 7G
+              <span class="widget-actividad__hora">hace 12 min</span>
+            </li>
+            <li class="widget-actividad__item">
+              <span
+                class="widget-actividad__dot widget-actividad__dot--error"
+              ></span>
+              Fallo en motor de curvatura
+              <span class="widget-actividad__hora">hace 45 min</span>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
   </body>
