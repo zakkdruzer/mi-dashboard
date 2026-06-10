@@ -21,7 +21,7 @@ button {
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #0f172a;
+  background-color: #020617;
   color: #e5e7eb;
   line-height: 1.5;
 }
@@ -39,7 +39,7 @@ p {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 260px 1fr;
-  background-color: #0f172a;
+  background-color: #020617;
 }
 @media (min-width: 768px) {
   .layout {
@@ -69,7 +69,7 @@ p {
 .sidebar__logo {
   font-weight: 800;
   font-size: 1.2rem;
-  color: #2563eb;
+  color: #6366f1;
 }
 .sidebar__nav {
   display: flex;
@@ -90,7 +90,7 @@ p {
   color: #e5e7eb;
 }
 .sidebar__link--activo {
-  background-color: #2563eb;
+  background-color: #6366f1;
   color: #ffffff;
 }
 
@@ -109,8 +109,54 @@ p {
   gap: 0.5rem;
 }
 
+.widget-actividad {
+  background-color: #020826;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.widget-actividad__titulo {
+  font-size: 1.1rem;
+}
+.widget-actividad__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.widget-actividad__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+.widget-actividad__hora {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+.widget-actividad__dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+}
+.widget-actividad__dot--exito {
+  background-color: #22c55e;
+}
+.widget-actividad__dot--alerta {
+  background-color: #facc15;
+}
+.widget-actividad__dot--error {
+  background-color: #ef4444;
+}
+
 .boton {
-  background-color: #2563eb;
+  background-color: #6366f1;
   color: #ffffff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -124,15 +170,15 @@ p {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 .boton:hover {
-  background-color: rgb(20.7142857143, 84.9285714286, 225.7857142857);
+  background-color: rgb(75.6, 79.05, 238.9);
   transform: translateY(-1px);
 }
 .boton:focus-visible {
-  outline: 2px solid #facc15;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 .boton--secundario {
-  background-color: #1e293b;
+  background-color: #020826;
   color: #ffffff;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -146,11 +192,11 @@ p {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 .boton--secundario:hover {
-  background-color: rgb(21.404494382, 29.2528089888, 42.095505618);
+  background-color: rgb(0.725, 2.9, 13.775);
   transform: translateY(-1px);
 }
 .boton--secundario:focus-visible {
-  outline: 2px solid #facc15;
+  outline: 2px solid #f97316;
   outline-offset: 2px;
 }
 
@@ -167,7 +213,7 @@ p {
   background-color: #22c55e;
 }
 .badge--alerta {
-  background-color: #f97316;
+  background-color: #facc15;
 }
 .badge--error {
   background-color: #ef4444;
@@ -190,7 +236,7 @@ p {
 }
 
 .stat {
-  background-color: #1e293b;
+  background-color: #020826;
   padding: 1rem;
   border-radius: 0.75rem;
   display: flex;
@@ -208,7 +254,7 @@ p {
 }
 
 .panel {
-  background-color: #1e293b;
+  background-color: #020826;
   border-radius: 0.75rem;
   padding: 1rem;
   display: flex;

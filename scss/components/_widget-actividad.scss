@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as v;
+
+.widget-actividad {
+  background-color: v.$color-fondo-card;
+  border-radius: v.$radio-base;
+  padding: v.$espacio-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-md;
+
+  &__titulo {
+    font-size: 1.1rem;
+  }
+
+  &__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: v.$color-texto-suave;
+  }
+
+  &__hora {
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: v.$color-texto-suave;
+  }
+
+  &__dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 999px;
+
+    &--exito {
+      background-color: v.$color-exito;
+    }
+
+    &--alerta {
+      background-color: v.$color-alerta;
+    }
+
+    &--error {
+      background-color: v.$color-error;
+    }
+  }
+}

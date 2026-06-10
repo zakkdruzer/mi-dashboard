@@ -1,35 +1,84 @@
 // ================================
 // VARIABLES GLOBALES
 // ================================
+// Archivo: scss/abstracts/_variables.scss
+// Define paleta, espaciados, radios y breakpoints
+// para todo el dashboard "StarVoyager".
+// ================================
 
-// Paleta principal
-$color-primario: #2563eb; // Azul para botones primarios / link activo
-$color-acento:   #facc15; // Amarillo para detalles (focus, acentos)
 
-// Neutros / fondos
-$color-fondo:       #0f172a; // Fondo general del dashboard
-$color-fondo-card:  #1e293b; // Paneles / tarjetas
-$color-texto:       #e5e7eb; // Texto principal
-$color-texto-suave: #9ca3af; // Texto secundario / labels
+// --------------------------------
+// Paleta principal (tema espacial)
+// --------------------------------
 
-// Colores de estado (para badges)
+// Color principal para acciones importantes
+// (botón primario, link activo, etc.)
+$color-primario: #6366f1; // azul-violeta tipo neón
+
+// Color de acento para detalles, focus, etc.
+$color-acento:   #f97316; // naranja brillante
+
+
+// --------------------------------
+// Neutros / fondos / texto
+// --------------------------------
+
+// Fondo general del dashboard (espacio oscuro)
+$color-fondo:       #020617; // casi negro
+
+// Fondo de tarjetas, paneles, widgets
+$color-fondo-card:  #020826;
+
+// Color de texto principal
+$color-texto:       #e5e7eb;
+
+// Color de texto secundario (labels, info menos importante)
+$color-texto-suave: #9ca3af;
+
+
+// --------------------------------
+ // Colores de estado (badges)
+// --------------------------------
+
+// Éxito: misión completada, aumento positivo
 $color-exito:  #22c55e;
-$color-alerta: #f97316;
+
+// Alerta: pendiente, en curso, advertencia
+$color-alerta: #facc15;
+
+// Error: fallo, cancelado, misión abortada
 $color-error:  #ef4444;
 
-// Espaciados
+
+// --------------------------------
+// Espaciados y radios
+// --------------------------------
+
+// Espaciados base para padding/margins
 $espacio-sm: 0.5rem;
 $espacio-md: 1rem;
 $espacio-lg: 1.5rem;
 
-// Radio reutilizable (tarjetas, botones, badges)
+// Radio de borde reutilizable en tarjetas, botones y badges
 $radio-base: 0.75rem;
 
-// Breakpoints
+
+// --------------------------------
+// Breakpoints (para mixin respond-to)
+// --------------------------------
+
+// Ancho para tablet
 $bp-tablet: 768px;
+
+// Ancho para desktop
 $bp-desktop: 1024px;
 
-// Mapa de colores para badges (lo usaremos con @each)
+
+// --------------------------------
+// Mapa de colores para badges
+// --------------------------------
+// Se usa con @each en _badge.scss para generar
+// .badge--exito, .badge--alerta y .badge--error
 $badge-colores: (
   exito:  $color-exito,
   alerta: $color-alerta,
