@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as v;
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: v.$espacio-md;
+
+  &__titulo {
+    font-size: 1.5rem;
+  }
+
+  &__acciones {
+    display: flex;
+    gap: v.$espacio-sm;
+  }
+}

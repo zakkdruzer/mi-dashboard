@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+
+.sidebar {
+  background-color: #020617; // un poco más oscuro que el contenido
+  padding: v.$espacio-lg v.$espacio-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-lg;
+
+  &__logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: v.$color-primario;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: v.$radio-base;
+    color: v.$color-texto-suave;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: v.$color-texto;
+    }
+
+    &--activo {
+      background-color: v.$color-primario;
+      color: #ffffff;
+    }
+  }
+}

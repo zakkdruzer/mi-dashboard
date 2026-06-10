@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background-color: v.$color-fondo;
+
+  @include m.respond-to(tablet) {
+    grid-template-columns: 220px 1fr;
+  }
+
+  @include m.respond-to(desktop) {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+.contenido {
+  padding: v.$espacio-md;
+  display: flex;
+  flex-direction: column;
+  gap: v.$espacio-lg;
+}
